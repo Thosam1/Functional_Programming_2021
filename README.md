@@ -2,6 +2,8 @@
 
 The Work I have done in my second year of Computer Science in 2021, you can find many useful stuffs
 
+Official course link : https://gitlab.epfl.ch/lamp/cs210
+
 ## How To Use
 
 1) in Exercises you can find all 11 exercise sets with their solutions
