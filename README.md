@@ -41,7 +41,7 @@ case Stream.Empty
 You can also do pattern matching on 2 lists at the same time (x, y) match
 or turn strings into list[Char] by typing .toList
 
-11) Bring your glasses the exam day, I lost 3 points in the midterm because of that.
+11) Bring your glasses the exam day, I lost 3 points in the midterm because I couldn't see the blackboard and my social anxiety kicked so hard that I couldn't ask for what was written there.
 12) If the exam is a QCM, you can find inductions by working from one end and the other, and try to bridge the gap in between (easier and faster).
 
 So that's all for me, my name is Thösam, at the time of writing this, it is Christmas (25/12/2021), I am a student at the EPFL and I hope you will grow through this journey :D.
