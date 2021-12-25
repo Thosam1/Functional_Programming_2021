@@ -20,7 +20,7 @@ I got 30% on my midterm because I spent too much time on stuffs that we were not
 1) Do all exercise sets that are RELEVANT to the midterm at least 4 times.
 2) Do harder exercises on variance such as midterm of 2021 (this one more than 80% of students didn't find the correct answer ! )
 3) Pray God
-4) Revise other midterms
+4) Revise other midterms 
 5) Type 99 scala problems and do them : http://aperiodic.net/phil/scala/s-99/
 
 
@@ -54,5 +54,8 @@ Ex set 8, set 11
 Ex set 7 Q2
 Exam 2019 Q2, Q3/d
 Exam 2020 Q23, 24, 25
+
+### How to test code ?
+I don't know, Personally, I cloned the repo of past 2020 exam, then I wrote my tests inside Q10Suite along other tests it was the easiest way to test for me using assertEquals and "samples" given in previous exams eg: xxx in the function should return yyy
 
 (idk but for yield to map, flatmap etc -> always flatmap exept the last which is always a map)
