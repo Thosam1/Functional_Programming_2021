@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Grading/test, Some(d689faba-7c88-4561-9011-0ae0619a1dba), Some(CommandSource(console0)))[0m
+[0m[[0m[31merror[0m] [0m[0mNo such setting/task[0m
+[0m[[0m[31merror[0m] [0m[0mGrading/test[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -1,0 +1,143 @@
+
+Note : You can find those / test those in the Q10 of exam 2020 in "Past2020Exam" Folder with all implementations of 2020 exam
+
+
+  test(" Exam 2016 - Question 2 ") {
+
+    def pairAverages(data : Stream[Double]) : Stream[Double] =
+      data match {
+        case h1 #:: h2 #:: t => ((h1 + h2) / 2) #:: pairAverages(data.tail)
+        case _ => Stream.Empty
+      }
+
+    assertEquals(pairAverages(Stream(1.0, 1.0, 4.0, 5.0, 7.0, 0.0)), Stream(1, 2.5, 4.5, 6, 3.5))
+
+
+    def windowAverage(windowSize : Double, data: Stream[Double]) : Stream[Double] =
+      def Trec(data: Stream[Double]) : Stream[Double] =
+        if data.size < windowSize then Stream.Empty // exit
+        else
+          (sum(data.take(windowSize.toInt), 0) / windowSize) #:: Trec(data.tail)
+
+      def sum(d: Stream[Double], acc: Double) : Double =
+        d match {
+          case h #:: t => sum(t, acc + h)
+          case Stream.Empty => acc
+        }
+      Trec(data)
+
+
+    assertEquals( windowAverage(2.0, Stream(1.0, 1.0, 4, 5, 7)), Stream(1, 2.5, 4.5, 6))
+    assertEquals( windowAverage(3, Stream(1, 2, 5, 8, 15)), Stream(2.6666666666666665, 5, 9.333333333333334))
+
+    def rollingAverage(data: Stream[Double]) : Stream[Double] =
+      def Trec(acc: Stream[Double], n: Int) : Stream[Double] =
+        n match
+          case 0 => acc
+          case _ =>
+            val avg = windowAverage(n, data.take(n))
+            Trec(avg #::: acc, n-1)
+      Trec(Stream.Empty, data.size)
+
+    assertEquals( rollingAverage(Stream(1, 2, 3, 4, 5)), Stream(1, 1.5, 2, 2.5, 3))
+
+  }
+
+  test(" exam 2017 - question 3 "){
+
+    def testStartsWith(input: Stream[Char], pattern: List[Char]) : Option[Stream[Char]] =
+      def rec( in: Stream[Char], pattern: List[Char]) : Option[Stream[Char]] =
+        (in, pattern) match
+          case (h1 #:: t1, h2 :: t2) =>
+            if (h1 == h2) then rec(t1, t2)
+            else None
+          case _ =>
+            if !in.isEmpty && pattern.isEmpty then
+              Some(in)
+            else
+              None
+
+      rec(input, pattern)
+
+
+    def replaceAll( input: Stream[Char], pattern: List[Char], replacement: List[Char]) : Stream[Char] =
+      def rec(acc: Stream[Char], input: Stream[Char], pattern : List[Char], replacement: List[Char]) : Stream[Char] =
+        if input.size < pattern.size then
+          acc.reverse #::: input
+        else
+          input match {
+            case h #::t =>
+              val start = testStartsWith(input, pattern).getOrElse(false) // start = what is left if the pattern is found, else we stock false if nothing is found
+              if (start == false) then
+                print("case false, head is " + h + "\n")
+                rec(h #:: acc, t, pattern, replacement) // nothing is found so we add the first element to the accumulator, we validate this letter
+              else
+                val left = input.drop(pattern.size) // if we found something, then we take what is left after dropping the packet
+                print(" new input : " + replacement.toStream.take(replacement.size-1) #::: left + "\n")
+                rec(acc, replacement.toStream.take(replacement.size-1) #::: left, pattern, replacement) // we add the replacement to what is left, and we consider this as the new input
+          }
+
+      rec(Stream(), input, pattern, replacement)
+
+    assertEquals( testStartsWith(Stream('a', 'b', 'c'), List('a', 'b')) , Some(Stream('c')))
+    assertEquals( testStartsWith(Stream('a', 'b', 'c'), List('b', 'c')) , None )
+
+    assertEquals( replaceAll(Stream('a', 'a', 'a'), List('a', 'a'), List('b')) , Stream('b', 'a'))
+    assertEquals( replaceAll(Stream('a', 'a', 'b', 'a', 'b', 'a'), List('a', 'b', 'a'), List('b', 'a')) , Stream('a', 'b', 'b', 'a'))
+
+
+  }
+
+  test( "exam 2018 - ex 4 " ){
+    def transpose(src: Stream[Stream[String]]) : Stream[Stream[String]] =
+      if src == Stream(Stream()) then Stream(Stream())
+      else
+        Stream.from(0).map( i => src.map(row => row.apply(i)) ).take(src(0).size)
+
+    assertEquals(transpose(Stream(Stream("1", "2"), Stream("3", "4"))), Stream(Stream("1", "3"), Stream("2", "4")) )
+
+    assertEquals(transpose(Stream(Stream("1", "2"))), Stream(Stream("1"), Stream("2")) )
+
+    assertEquals(transpose(Stream(Stream("1"))), Stream(Stream("1")) )
+
+    assertEquals(transpose(Stream(Stream())), Stream(Stream()) )
+
+  }
+
+  test(" exam 2019 - question 1 "){
+    def uniq[T](list: List[T]) : List[T] =
+      def rec(l: List[T], acc: Set[T]) : List[T] =
+        l match {
+          case Nil => acc.toList
+          case h :: t => rec(t, acc + h)
+        }
+      rec(list, Set.empty)
+
+    assertEquals(List(0), uniq(List(1, 2, 3, 2, 4, 1)))
+    assertEquals(List(0), uniq(List(1, 2, 3, 1, 2, 3, 4)))
+  }
+
+  test(" exam 2019 - question 4 "){
+
+    def insert[T](input: LazyList[T], elem: T, idx: Int): LazyList[T] =
+      input.take(idx) #::: (elem #:: input.drop(idx))
+
+
+    def next[T](elem: T, n: Int, input: LazyList[LazyList[T]]) : LazyList[LazyList[T]] =
+      for{
+        laz <- input
+        idx <- 0 to n
+      } yield insert(laz, elem, idx)
+
+    def permutation[T](input: LazyList[T]) : LazyList[LazyList[T]] =
+      def rec(ls: LazyList[T], acc: LazyList[LazyList[T]]) : LazyList[LazyList[T]]=
+        ls match
+          case LazyList() => acc
+          case h #:: t => rec(t, next(h, acc(0).size, acc))
+      rec(input, LazyList(LazyList()))
+
+    assertEquals( LazyList(LazyList("test (b) : ")), next("c", 2, LazyList(LazyList("a", "b"), LazyList("b", "a"))) )
+
+    assertEquals(LazyList(LazyList("test (c) : ")), permutation(LazyList("a", "b", "c")))
+
+  }

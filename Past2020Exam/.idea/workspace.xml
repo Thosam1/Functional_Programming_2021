@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbf79958-f61d-43be-ad13-05374f71115d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/cs210-q10/src/main/scala/q10/Q10.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q10/src/main/scala/q10/Q10.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q10/src/test/scala/q10/Q10Suite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q10/src/test/scala/q10/Q10Suite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q16/src/main/scala/q16/Q16.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q16/src/main/scala/q16/Q16.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q17/src/main/scala/q17/Q17.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q17/src/main/scala/q17/Q17.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q18/src/main/scala/q18/Q18.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q18/src/main/scala/q18/Q18.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q19/src/main/scala/q19/Q19.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q19/src/main/scala/q19/Q19.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q20/src/main/scala/q20/Q20.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q20/src/main/scala/q20/Q20.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q21/src/main/scala/q21/Q21.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q21/src/main/scala/q21/Q21.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q22/src/main/scala/q22/Q22.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q22/src/main/scala/q22/Q22.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q23/src/main/scala/q23/Q23.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q23/src/main/scala/q23/Q23.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q24/src/main/scala/q24/Q24.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q24/src/main/scala/q24/Q24.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q25/src/main/scala/q25/Q25.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q25/src/main/scala/q25/Q25.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q7/src/main/scala/q7/Q7.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q7/src/main/scala/q7/Q7.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q8/src/main/scala/q8/Q8.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q8/src/main/scala/q8/Q8.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs210-q9/src/main/scala/q9/Q9.scala" beforeDir="false" afterPath="$PROJECT_DIR$/cs210-q9/src/main/scala/q9/Q9.scala" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cs210-q23" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="22NB2m4hEmrx1iuajNjkcZCEuvZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labs/Lab9/cs210-interpreter" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbf79958-f61d-43be-ad13-05374f71115d" name="Changes" comment="" />
+      <created>1639667960096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639667960096</updated>
+      <workItem from="1639667961480" duration="27000" />
+      <workItem from="1639672811585" duration="940000" />
+      <workItem from="1640169892067" duration="3340000" />
+      <workItem from="1640256409676" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

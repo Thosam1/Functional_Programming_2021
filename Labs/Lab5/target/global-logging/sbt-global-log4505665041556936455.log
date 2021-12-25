@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Grading/tests, Some(a5e784e2-72e0-4dde-b67d-b5bf0d1e3794), Some(CommandSource(console0)))[0m
+[0m[[0m[31merror[0m] [0m[0mNot a valid key: tests (similar: test, testOnly, testOptions)[0m
+[0m[[0m[31merror[0m] [0m[0mGrading/tests[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
